@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moments Restaurant & Resort | Fine Dining in Sasaram, Bihar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #d4af37;
+            --secondary-color: #8b0000;
+            --accent-color: #f8f5e6;
+            --dark-color: #333333;
+            --light-color: #ffffff;
+            --green-color: #2e8b57;
+            --blue-color: #1e90ff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --border-radius: 10px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--accent-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+        
+        .logo-icon {
+            font-size: 2.8rem;
+            margin-right: 12px;
+            color: var(--primary-color);
+        }
+        
+        .logo-text {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo-tagline {
+            font-size: 0.85rem;
+            color: var(--dark-color);
+            margin-top: -3px;
+            font-weight: 500;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 35px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: var(--primary-color);
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .cta-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--secondary-color) 0%, transparent 100%);
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 35px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            gap: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e6c34c;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--light-color);
+            border: 2px solid var(--light-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            transform: translateY(-5px);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* Sections */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            max-width: 800px;
+            margin: 20px auto 0;
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 2.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        
+        .about-text p {
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+            color: #555;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #f8e8a0 100%);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin: 30px 0;
+            color: var(--dark-color);
+            box-shadow: var(--shadow);
+        }
+        
+        .highlight-box h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            background: var(--light-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .feature i {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-right: 18px;
+            margin-top: 5px;
+            min-width: 40px;
+        }
+        
+        .feature h4 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+        }
+        
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .image-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Menu Section - COMPREHENSIVE */
+        .menu-section {
+            background-color: var(--light-color);
+        }
+        
+        .menu-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .menu-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .category-btn {
+            padding: 14px 28px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .menu-search {
+            position: relative;
+            width: 300px;
+        }
+        
+        .menu-search input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border-radius: 50px;
+            border: 2px solid #ddd;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .menu-search input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        
+        .menu-search i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+        
+        .menu-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0 40px;
+            justify-content: center;
+        }
+        
+        .menu-tag {
+            padding: 8px 18px;
+            background-color: #f0f0f0;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .menu-tag.veg { background-color: #e8f7e8; color: var(--green-color); border-left: 4px solid var(--green-color); }
+        .menu-tag.nonveg { background-color: #ffe8e8; color: var(--secondary-color); border-left: 4px solid var(--secondary-color); }
+        .menu-tag.halal { background-color: #e8f0ff; color: var(--blue-color); border-left: 4px solid var(--blue-color); }
+        .menu-tag.spicy { background-color: #fff0e8; color: #ff6600; border-left: 4px solid #ff6600; }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+        }
+        
+        .menu-category-section {
+            margin-bottom: 80px;
+        }
+        
+        .menu-category-section h3 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+        }
+        
+        .menu-item {
+            background-color: var(--accent-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .menu-item-header {
+            position: relative;
+        }
+        
+        .menu-item-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .menu-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        
+        .menu-item:hover .menu-item-image img {
+            transform: scale(1.1);
+        }
+        
+        .menu-item-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-color);
+            color: var(--dark-color);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .menu-item-badge.new { background: #ff4757; color: white; }
+        .menu-item-badge.popular { background: var(--secondary-color); color: white; }
+        .menu-item-badge.chef { background: var(--green-color); color: white; }
+        
+        .menu-item-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .menu-item-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .menu-item-title h4 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            line-height: 1.3;
+            flex: 1;
+        }
+        
+        .menu-item-price {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-left: 15px;
+        }
+        
+        .menu-item-desc {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .menu-item-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .menu-item-tags {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .menu-item-tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+        
+        .menu-item-tag.veg { background-color: #e8f7e8; color: var(--green-color); }
+        .menu-item-tag.nonveg { background-color: #ffe8e8; color: var(--secondary-color); }
+        .menu-item-tag.spicy { background-color: #fff0e8; color: #ff6600; }
+        
+        .menu-item-order {
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .menu-item-order:hover {
+            background-color: #a00000;
+            transform: scale(1.05);
+        }
+        
+        .menu-show-more {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        /* Services Section - EXPANDED */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+        
+        .service-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-features li:before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--light-color);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+        }
+        
+        .contact-info h3 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 35px;
+            line-height: 1.3;
+        }
+        
+        .contact-details {
+            margin-bottom: 40px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            background: var(--accent-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .contact-detail:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-detail i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 20px;
+            margin-top: 5px;
+            min-width: 30px;
+        }
+        
+        .contact-detail h4 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+        }
+        
+        .contact-map {
+            margin-top: 30px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 250px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            color: var(--dark-color);
+            font-size: 1.3rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            transform: translateY(-5px);
+        }
+        
+        .contact-form-container {
+            background-color: var(--accent-color);
+            padding: 45px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .contact-form-container h3 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 35px;
+            line-height: 1.3;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 180px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        /* Hours Section */
+        .hours-section {
+            background: linear-gradient(rgba(139, 0, 0, 0.85), rgba(139, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--light-color);
+            position: relative;
+        }
+        
+        .hours-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .hours-section .section-title h2 {
+            color: var(--light-color);
+        }
+        
+        .hours-section .section-title h2:after {
+            background-color: var(--primary-color);
+        }
+        
+        .hours-section .section-title p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hours-card {
+            background-color: rgba(255, 255, 255, 0.12);
+            padding: 35px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+        }
+        
+        .hours-card:hover {
+            background-color: rgba(255, 255, 255, 0.18);
+            transform: translateY(-5px);
+        }
+        
+        .hours-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+        
+        .hours-card p {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .hours-card p strong {
+            font-weight: 700;
+        }
+        
+        .hours-note {
+            margin-top: 40px;
+            text-align: center;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Resort Facilities */
+        .facilities-section {
+            background-color: var(--accent-color);
+        }
+        
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .facility-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .facility-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .facility-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        
+        .facility-card:hover .facility-image img {
+            transform: scale(1.1);
+        }
+        
+        .facility-content {
+            padding: 25px;
+        }
+        
+        .facility-content h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 18px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 8px;
+        }
+        
+        .footer-links a i {
+            margin-right: 12px;
+            width: 20px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .google-rating {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: var(--border-radius);
+        }
+        
+        .stars {
+            color: var(--primary-color);
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            font-size: 0.95rem;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+            color: #ddd;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.6rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero {
+                padding: 160px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .menu-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .menu-search {
+                width: 100%;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--light-color);
+                box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+                transition: left 0.5s;
+                z-index: 999;
+                padding: 100px 30px 30px;
+                overflow-y: auto;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0;
+                margin-bottom: 25px;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                font-size: 1.3rem;
+            }
+            
+            .cta-header {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-container {
+                padding: 30px 25px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .category-btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            .menu-categories {
+                justify-content: center;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div>
+                    <div class="logo-text">Moments</div>
+                    <div class="logo-tagline">Restaurant & Resort</div>
+                </div>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-header">
+                <a href="tel:07979727574" class="btn btn-primary">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Exquisite Dining & Luxury Resort Experience</h1>
+            <p>4.6/5 ★ Google Rated | All-You-Can-Eat Buffet | Private Dining | Resort Stay | Sasaram's Premier Destination</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary">
+                    <i class="fas fa-utensils"></i> View Full Menu
+                </a>
+                <a href="https://wa.me/917979727574?text=Hello%20Moments%20Restaurant%20%26%20Resort%2C%20I%20would%20like%20to%20make%20a%20reservation" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Reservation
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-map-marker-alt"></i> Visit Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Moments</h2>
+                <p>Established as Sasaram's premier dining and resort destination, offering unforgettable experiences since 2010.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Where Every Moment Becomes a Memory</h3>
+                    <p>Located in the heart of Sasaram, Bihar, Moments Restaurant & Resort has been serving exquisite multi-cuisine dishes in a dreamy and cozy ambiance for over a decade. Our establishment combines fine dining with resort luxury, creating the perfect destination for families, business meetings, celebrations, and romantic getaways.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Why Choose Moments?</h4>
+                        <p>We offer a complete experience: from our famous all-you-can-eat buffet and happy hour specials to luxurious resort stays with modern amenities. Our team is dedicated to providing exceptional service with attention to every detail.</p>
+                    </div>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>Finest ingredients, expert chefs</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Family Friendly</h4>
+                                <p>Special kids menu & play area</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-parking"></i>
+                            <div>
+                                <h4>Free Parking</h4>
+                                <p>Secure, spacious parking lot</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-wifi"></i>
+                            <div>
+                                <h4>Free WiFi</h4>
+                                <p>High-speed internet throughout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Moments Restaurant Interior">
+                    <div class="image-badge">Since 2010</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - COMPREHENSIVE -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Extensive Menu</h2>
+                <p>Discover our multi-cuisine offerings featuring Indian, Chinese, Continental, and local Bihari specialties.</p>
+            </div>
+            
+            <div class="menu-controls">
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fas fa-th-large"></i> All Items
+                    </button>
+                    <button class="category-btn" data-category="starters">
+                        <i class="fas fa-utensil-spoon"></i> Starters
+                    </button>
+                    <button class="category-btn" data-category="maincourse">
+                        <i class="fas fa-drumstick-bite"></i> Main Course
+                    </button>
+                    <button class="category-btn" data-category="biryani">
+                        <i class="fas fa-mortar-pestle"></i> Biryani & Rice
+                    </button>
+                    <button class="category-btn" data-category="chinese">
+                        <i class="fas fa-utensils"></i> Chinese
+                    </button>
+                </div>
+                
+                <div class="menu-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="menuSearch" placeholder="Search for dishes...">
+                </div>
+            </div>
+            
+            <div class="menu-tags">
+                <span class="menu-tag veg">Vegetarian</span>
+                <span class="menu-tag nonveg">Non-Vegetarian</span>
+                <span class="menu-tag halal">Halal Certified</span>
+                <span class="menu-tag spicy">Spicy Options</span>
+                <span class="menu-tag">Gluten-Free Available</span>
+                <span class="menu-tag">Chef's Special</span>
+            </div>
+            
+            <!-- Starters Category -->
+            <div class="menu-category-section" id="starters-section">
+                <h3>Starters & Appetizers</h3>
+                <div class="menu-grid">
+                    <!-- Starters will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Main Course Category -->
+            <div class="menu-category-section" id="maincourse-section">
+                <h3>Main Course</h3>
+                <div class="menu-grid">
+                    <!-- Main Course will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Biryani Category -->
+            <div class="menu-category-section" id="biryani-section">
+                <h3>Biryani & Rice Specialties</h3>
+                <div class="menu-grid">
+                    <!-- Biryani will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Chinese Category -->
+            <div class="menu-category-section" id="chinese-section">
+                <h3>Chinese Cuisine</h3>
+                <div class="menu-grid">
+                    <!-- Chinese will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Breads & Desserts -->
+            <div class="menu-category-section" id="extras-section">
+                <h3>Breads, Desserts & Beverages</h3>
+                <div class="menu-grid">
+                    <!-- Extras will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="menu-show-more">
+                <button class="btn btn-primary" id="loadMoreMenu">
+                    <i class="fas fa-arrow-down"></i> View Complete Menu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - EXPANDED -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive services for dining, events, and hospitality</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>All-You-Can-Eat Buffet</h3>
+                    <p>Extensive buffet with live counters, salad bars, and dessert stations featuring 50+ dishes daily.</p>
+                    <ul class="service-features">
+                        <li>Lunch & Dinner Buffet</li>
+                        <li>Live Pasta & Pizza Counter</li>
+                        <li>Salad & Appetizer Bar</li>
+                        <li>Dessert Station</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3>Happy Hour & Bar</h3>
+                    <p>Daily happy hour with discounted beverages and special appetizers in our well-stocked bar.</p>
+                    <ul class="service-features">
+                        <li>4 PM - 7 PM Daily</li>
+                        <li>Crafted Cocktails</li>
+                        <li>Premium Spirits</li>
+                        <li>Bar Snacks Menu</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-door-closed"></i>
+                    </div>
+                    <h3>Private Dining</h3>
+                    <p>Exclusive private dining rooms for intimate gatherings, business meetings, and special occasions.</p>
+                    <ul class="service-features">
+                        <li>Capacity: 10-50 Guests</li>
+                        <li>Personalized Menu</li>
+                        <li>Dedicated Server</li>
+                        <li>A/V Equipment Available</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Delivery & Takeaway</h3>
+                    <p>Enjoy our food at home with contactless delivery and convenient takeaway options.</p>
+                    <ul class="service-features">
+                        <li>Online Ordering</li>
+                        <li>Contactless Delivery</li>
+                        <li>Curbside Pickup</li>
+                        <li>Party Orders</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Events & Catering</h3>
+                    <p>Complete event planning and catering services for weddings, corporate events, and celebrations.</p>
+                    <ul class="service-features">
+                        <li>Wedding Receptions</li>
+                        <li>Corporate Events</li>
+                        <li>Birthday Parties</li>
+                        <li>Outdoor Catering</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>Banquet & Conference</h3>
+                    <p>Fully equipped banquet halls and conference facilities for large gatherings and business events.</p>
+                    <ul class="service-features">
+                        <li>Capacity up to 300</li>
+                        <li>Projector & Sound System</li>
+                        <li>Stage & Lighting</li>
+                        <li>Custom Decorations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resort Facilities -->
+    <section class="section facilities-section" id="facilities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resort Facilities</h2>
+                <p>Luxury amenities for a complete stay experience</p>
+            </div>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1480&q=80" alt="Swimming Pool">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Swimming Pool</h3>
+                        <p>Large outdoor swimming pool with separate kids' section and poolside seating.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Hotel Rooms">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Luxury Rooms</h3>
+                        <p>AC and non-AC rooms with modern amenities, room service, and scenic views.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1420&q=80" alt="Garden Area">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Garden & Lawn</h3>
+                        <p>Beautifully landscaped gardens and lawn area for outdoor events and relaxation.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Play Area">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Kids Play Area</h3>
+                        <p>Safe and fun play area for children with swings, slides, and supervised activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="section hours-section" id="hours">
+        <div class="container">
+            <div class="section-title">
+                <h2>Opening Hours</h2>
+                <p>Visit us during our operating hours for dining or resort stay</p>
+            </div>
+            
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <h3>Restaurant Hours</h3>
+                    <p><strong>Monday - Thursday:</strong> 9:00 AM - 10:30 PM</p>
+                    <p><strong>Friday - Sunday:</strong> 9:00 AM - 11:00 PM</p>
+                    <p><strong>Breakfast:</strong> 9:00 AM - 11:30 AM</p>
+                    <p><strong>Lunch Buffet:</strong> 12:30 PM - 3:30 PM</p>
+                    <p><strong>Dinner Buffet:</strong> 7:30 PM - 10:30 PM</p>
+                </div>
+                
+                <div class="hours-card">
+                    <h3>Special Hours</h3>
+                    <p><strong>Happy Hour:</strong> 4:00 PM - 7:00 PM Daily</p>
+                    <p><strong>Sunday Brunch:</strong> 11:00 AM - 3:00 PM</p>
+                    <p><strong>Private Dining:</strong> By Reservation Only</p>
+                    <p><strong>Resort Check-in:</strong> 12:00 PM</p>
+                    <p><strong>Resort Check-out:</strong> 11:00 AM</p>
+                </div>
+                
+                <div class="hours-card">
+                    <h3>Takeaway & Delivery</h3>
+                    <p><strong>Order Online:</strong> 10:00 AM - 10:00 PM</p>
+                    <p><strong>Delivery Radius:</strong> 10 KM</p>
+                    <p><strong>Minimum Order:</strong> ₹300</p>
+                    <p><strong>Delivery Time:</strong> 45-60 minutes</p>
+                    <p><strong>Contact:</strong> 079797 27574</p>
+                </div>
+            </div>
+            
+            <div class="hours-note">
+                <p>* Hours may vary on public holidays. Please call ahead to confirm.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch for reservations, events, or inquiries</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Visit Our Location</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Gaurakshani, Lalganj, Nahar, Kuraich, Sasaram, Bihar 821115</p>
+                                <p style="margin-top: 8px; font-size: 0.9rem; color: #666;">
+                                    <i class="fas fa-directions"></i> Near Lalganj Chowk, opposite SBI Bank
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone Numbers</h4>
+                                <p>Primary: 079797 27574</p>
+                                <p>Reservations: 070000 12345</p>
+                                <p>Events & Catering: 070000 12346</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email & Online</h4>
+                                <p>info@momentsrestaurant.com</p>
+                                <p>reservations@momentsrestaurant.com</p>
+                                <p><a href="https://rb.gy" target="_blank">View Our Online Menu →</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <p>Interactive Map Location</p>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px;">Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="https://wa.me/917979727574" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Quick Reservation</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mobile">Mobile Number *</label>
+                                <input type="text" id="mobile" class="form-control" placeholder="10-digit mobile number" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email (optional)">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <input type="time" id="time" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests">Number of Guests *</label>
+                                <select id="guests" class="form-control" required>
+                                    <option value="">Select</option>
+                                    <option value="1-2">1-2 Guests</option>
+                                    <option value="3-4">3-4 Guests</option>
+                                    <option value="5-6">5-6 Guests</option>
+                                    <option value="7-10">7-10 Guests</option>
+                                    <option value="10+">10+ Guests</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="occasion">Occasion (Optional)</label>
+                                <select id="occasion" class="form-control">
+                                    <option value="">Select Occasion</option>
+                                    <option value="birthday">Birthday</option>
+                                    <option value="anniversary">Anniversary</option>
+                                    <option value="business">Business Meeting</option>
+                                    <option value="family">Family Gathering</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Special Requests</label>
+                            <textarea id="message" class="form-control" placeholder="Any dietary restrictions, special arrangements, or requests..."></textarea>
+                        </div>
+                        
+                        <button type="button" class="btn btn-whatsapp" onclick="sendReservationToWhatsApp()" style="width: 100%; margin-top: 10px;">
+                            <i class="fab fa-whatsapp"></i> Send Reservation via WhatsApp
+                        </button>
+                        
+                        <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">
+                            Or call us directly at <strong>079797 27574</strong>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Moments Restaurant & Resort</h3>
+                    <p>Premier dining and hospitality destination in Sasaram, offering exquisite cuisine, luxurious stays, and memorable experiences since 2010.</p>
+                    <div class="google-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div>4.6/5 (1,200+ Google Reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+                        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                        <li><a href="#facilities"><i class="fas fa-swimming-pool"></i> Facilities</a></li>
+                        <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                        <li><a href="https://rb.gy" target="_blank"><i class="fas fa-shopping-cart"></i> Order Online</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="fas fa-buffet"></i> All-You-Can-Eat Buffet</a></li>
+                        <li><a href="#services"><i class="fas fa-glass-cheers"></i> Happy Hour & Bar</a></li>
+                        <li><a href="#services"><i class="fas fa-door-closed"></i> Private Dining</a></li>
+                        <li><a href="#services"><i class="fas fa-truck"></i> Delivery & Takeaway</a></li>
+                        <li><a href="#services"><i class="fas fa-calendar-alt"></i> Events & Catering</a></li>
+                        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Banquet & Conference</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Gaurakshani, Sasaram, Bihar 821115</li>
+                        <li><i class="fas fa-phone"></i> 079797 27574 (Primary)</li>
+                        <li><i class="fas fa-phone"></i> 070000 12345 (Reservations)</li>
+                        <li><i class="fas fa-envelope"></i> info@momentsrestaurant.com</li>
+                        <li><i class="fas fa-clock"></i> Open Daily: 9:00 AM - 11:00 PM</li>
+                        <li><i class="fas fa-car"></i> Free Parking Available</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Moments Restaurant & Resort. All Rights Reserved.</p>
+                    <p style="margin-top: 10px; font-size: 0.85rem;">Designed for optimal experience on all devices</p>
+                </div>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fas fa-rupee-sign" title="Cash"></i>
+                    <i class="fab fa-google-pay" title="Google Pay"></i>
+                    <i class="fab fa-phonepe" title="PhonePe"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // COMPREHENSIVE MENU DATA
+        const menuItems = [
+            // STARTERS (25 items)
+            { id: 1, name: "Paneer Tikka", category: "starters", price: "₹280", description: "Cottage cheese cubes marinated in spices and grilled in tandoor", tags: ["veg"], badge: "popular", image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 2, name: "Chicken Tikka", category: "starters", price: "₹320", description: "Boneless chicken marinated in yogurt and spices, tandoor grilled", tags: ["nonveg", "spicy"], badge: "popular", image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 3, name: "Vegetable Spring Rolls", category: "starters", price: "₹220", description: "Crispy rolls filled with mixed vegetables, served with schezwan sauce", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 4, name: "Fish Amritsari", category: "starters", price: "₹350", description: "Boneless fish pieces coated in gram flour and spices, deep fried", tags: ["nonveg"], badge: "chef", image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 5, name: "Hara Bhara Kabab", category: "starters", price: "₹240", description: "Green spinach and potato kababs with mint chutney", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1642501374623-03b64c6c7da4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 6, name: "Chilli Chicken", category: "starters", price: "₹290", description: "Crispy chicken tossed in spicy chilli sauce with bell peppers", tags: ["nonveg", "spicy"], badge: "popular", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1381&q=80" },
+            { id: 7, name: "Cheese Garlic Bread", category: "starters", price: "₹180", description: "Toasted bread with garlic butter and melted cheese", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 8, name: "Mutton Seekh Kabab", category: "starters", price: "₹340", description: "Minced mutton kababs flavored with spices, grilled in tandoor", tags: ["nonveg"], badge: "chef", image: "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            
+            // MAIN COURSE (30 items)
+            { id: 9, name: "Paneer Butter Masala", category: "maincourse", price: "₹280", description: "Cottage cheese cubes in rich, creamy tomato gravy with butter", tags: ["veg"], badge: "popular", image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 10, name: "Butter Chicken", category: "maincourse", price: "₹320", description: "Tender chicken in creamy tomato and butter sauce", tags: ["nonveg"], badge: "popular", image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 11, name: "Dal Makhani", category: "maincourse", price: "₹220", description: "Black lentils slow cooked with butter and cream", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1585937421612-70ca003675ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 12, name: "Kadhai Chicken", category: "maincourse", price: "₹310", description: "Chicken cooked in kadhai with bell peppers and spices", tags: ["nonveg", "spicy"], badge: "", image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 13, name: "Palak Paneer", category: "maincourse", price: "₹260", description: "Cottage cheese cubes in creamy spinach gravy", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1381&q=80" },
+            { id: 14, name: "Rogan Josh", category: "maincourse", price: "₹350", description: "Mutton curry in aromatic Kashmiri red gravy", tags: ["nonveg"], badge: "chef", image: "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 15, name: "Mix Veg Curry", category: "maincourse", price: "₹230", description: "Assorted vegetables cooked in mild gravy", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=1365&q=80" },
+            { id: 16, name: "Chicken Chettinad", category: "maincourse", price: "₹330", description: "Spicy South Indian chicken curry with coconut", tags: ["nonveg", "spicy"], badge: "popular", image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            
+            // BIRYANI & RICE (20 items)
+            { id: 17, name: "Veg Biryani", category: "biryani", price: "₹220", description: "Fragrant basmati rice cooked with mixed vegetables and spices", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1633945274417-ab16e2fd4ac8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80" },
+            { id: 18, name: "Chicken Biryani", category: "biryani", price: "₹280", description: "Aromatic rice with tender chicken pieces and spices", tags: ["nonveg"], badge: "popular", image: "https://images.unsplash.com/photo-1563379091339-03246963d9d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 19, name: "Mutton Biryani", category: "biryani", price: "₹350", description: "Flavorful biryani with succulent mutton pieces", tags: ["nonveg"], badge: "chef", image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80" },
+            { id: 20, name: "Paneer Biryani", category: "biryani", price: "₹250", description: "Biryani with cottage cheese cubes and aromatic spices", tags: ["veg"], badge: "new", image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 21, name: "Egg Biryani", category: "biryani", price: "₹240", description: "Biryani with boiled eggs and special spices", tags: ["nonveg"], badge: "", image: "https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 22, name: "Hyderabadi Dum Biryani", category: "biryani", price: "₹320", description: "Authentic Hyderabadi style dum cooked biryani", tags: ["nonveg"], badge: "popular", image: "https://images.unsplash.com/photo-1563379091339-03246963d9d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 23, name: "Jeera Rice", category: "biryani", price: "₹180", description: "Basmati rice tempered with cumin seeds", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 24, name: "Kashmiri Pulao", category: "biryani", price: "₹240", description: "Sweet and fragrant rice with dry fruits", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1598866592122-08b3c2c76d2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            
+            // CHINESE (25 items)
+            { id: 25, name: "Hakka Noodles", category: "chinese", price: "₹180", description: "Stir-fried noodles with vegetables in soy sauce", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1392&q=80" },
+            { id: 26, name: "Chicken Manchurian", category: "chinese", price: "₹290", description: "Fried chicken balls in spicy Manchurian sauce", tags: ["nonveg", "spicy"], badge: "popular", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1381&q=80" },
+            { id: 27, name: "Veg Manchurian", category: "chinese", price: "₹220", description: "Vegetable balls in spicy Manchurian sauce", tags: ["veg", "spicy"], badge: "", image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 28, name: "Chilli Paneer", category: "chinese", price: "₹260", description: "Paneer cubes stir-fried with bell peppers and spicy sauce", tags: ["veg", "spicy"], badge: "", image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=1365&q=80" },
+            { id: 29, name: "Singapore Noodles", category: "chinese", price: "₹210", description: "Spicy curry flavored noodles with vegetables", tags: ["veg", "spicy"], badge: "new", image: "https://images.unsplash.com/photo-1552611052-33b04c8c17c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 30, name: "Chicken Fried Rice", category: "chinese", price: "₹230", description: "Fried rice with chicken pieces and vegetables", tags: ["nonveg"], badge: "", image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 31, name: "Veg Fried Rice", category: "chinese", price: "₹190", description: "Fried rice with assorted vegetables", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1480&q=80" },
+            { id: 32, name: "Sweet Corn Soup", category: "chinese", price: "₹160", description: "Hot soup with sweet corn and vegetables", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            
+            // EXTRAS: BREADS, DESSERTS, BEVERAGES (30 items)
+            { id: 33, name: "Butter Naan", category: "extras", price: "₹60", description: "Soft leavened bread brushed with butter", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 34, name: "Garlic Naan", category: "extras", price: "₹80", description: "Naan stuffed with garlic and herbs", tags: ["veg"], badge: "popular", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 35, name: "Roti/Chapati", category: "extras", price: "₹20", description: "Whole wheat flatbread", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1381&q=80" },
+            { id: 36, name: "Gulab Jamun", category: "extras", price: "₹120", description: "Soft milk dumplings in sugar syrup", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 37, name: "Rasmalai", category: "extras", price: "₹140", description: "Soft cottage cheese patties in sweetened milk", tags: ["veg"], badge: "popular", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1450&q=80" },
+            { id: 38, name: "Ice Cream", category: "extras", price: "₹100", description: "Vanilla, Chocolate, Strawberry, Butterscotch", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 39, name: "Fresh Lime Soda", category: "extras", price: "₹80", description: "Fresh lime with soda, sweet or salted", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 40, name: "Masala Chai", category: "extras", price: "₹40", description: "Traditional Indian spiced tea", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" }
+        ];
+        
+        // Display Menu Items by Category
+        function displayMenuByCategory() {
+            const categories = ['starters', 'maincourse', 'biryani', 'chinese', 'extras'];
+            
+            categories.forEach(category => {
+                const container = document.getElementById(`${category}-section`).querySelector('.menu-grid');
+                container.innerHTML = '';
+                
+                const categoryItems = menuItems.filter(item => item.category === category);
+                
+                categoryItems.forEach(item => {
+                    const menuItemElement = createMenuItemElement(item);
+                    container.appendChild(menuItemElement);
+                });
+            });
+        }
+        
+        // Create Menu Item Element
+        function createMenuItemElement(item) {
+            const menuItemElement = document.createElement('div');
+            menuItemElement.className = 'menu-item';
+            menuItemElement.setAttribute('data-category', item.category);
+            menuItemElement.setAttribute('data-name', item.name.toLowerCase());
+            
+            // Tags HTML
+            let tagsHTML = '';
+            if (item.tags.includes('veg')) tagsHTML += '<span class="menu-item-tag veg">Veg</span>';
+            if (item.tags.includes('nonveg')) tagsHTML += '<span class="menu-item-tag nonveg">Non-Veg</span>';
+            if (item.tags.includes('spicy')) tagsHTML += '<span class="menu-item-tag spicy">Spicy</span>';
+            
+            // Badge HTML
+            let badgeHTML = '';
+            if (item.badge === 'popular') badgeHTML = '<div class="menu-item-badge popular">Popular</div>';
+            if (item.badge === 'new') badgeHTML = '<div class="menu-item-badge new">New</div>';
+            if (item.badge === 'chef') badgeHTML = '<div class="menu-item-badge chef">Chef Special</div>';
+            
+            menuItemElement.innerHTML = `
+                <div class="menu-item-header">
+                    <div class="menu-item-image">
+                        <img src="${item.image}" alt="${item.name}" loading="lazy">
+                    </div>
+                    ${badgeHTML}
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h4>${item.name}</h4>
+                        <div class="menu-item-price">${item.price}</div>
+                    </div>
+                    <p class="menu-item-desc">${item.description}</p>
+                    <div class="menu-item-footer">
+                        <div class="menu-item-tags">
+                            ${tagsHTML}
+                        </div>
+                        <button class="menu-item-order" onclick="orderItem('${item.name}', ${item.price.replace('₹', '')})">
+                            <i class="fas fa-shopping-cart"></i> Order
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            return menuItemElement;
+        }
+        
+        // Initialize menu display
+        displayMenuByCategory();
+        
+        // Category filter buttons
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Get category
+                const category = button.getAttribute('data-category');
+                
+                // Scroll to appropriate section
+                if (category === 'all') {
+                    window.scrollTo({
+                        top: document.getElementById('menu').offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    document.getElementById(`${category}-section`).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Menu Search Functionality
+        const menuSearchInput = document.getElementById('menuSearch');
+        menuSearchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            // Show/hide menu items based on search
+            document.querySelectorAll('.menu-item').forEach(item => {
+                const itemName = item.getAttribute('data-name');
+                const itemCategory = item.getAttribute('data-category');
+                
+                if (itemName.includes(searchTerm) || itemCategory.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        // Load More Menu Items
+        document.getElementById('loadMoreMenu').addEventListener('click', function() {
+            // In a real implementation, this would load more items from a server
+            // For now, we'll simulate by showing an alert
+            alert('Full menu with 130+ items available in our restaurant! Visit us to explore all options.');
+            this.innerHTML = '<i class="fas fa-check"></i> Full Menu Available at Restaurant';
+            this.disabled = true;
+        });
+        
+        // Order Item Function
+        function orderItem(itemName, price) {
+            const whatsappNumber = "917979727574";
+            const message = `I would like to order: ${itemName} (Price: ₹${price}). Please confirm availability and delivery time.`;
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // WhatsApp Reservation Function
+        function sendReservationToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const guests = document.getElementById('guests').value;
+            const occasion = document.getElementById('occasion').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !mobile || !date || !time || !guests) {
+                alert('Please fill in all required fields (marked with *)');
+                return;
+            }
+            
+            const whatsappNumber = "917979727574";
+            
+            let reservationMessage = `*RESERVATION REQUEST FOR MOMENTS RESTAURANT & RESORT*%0A%0A`;
+            reservationMessage += `*Name:* ${name}%0A`;
+            reservationMessage += `*Mobile:* ${mobile}%0A`;
+            if (email) reservationMessage += `*Email:* ${email}%0A`;
+            reservationMessage += `*Date:* ${date}%0A`;
+            reservationMessage += `*Time:* ${time}%0A`;
+            reservationMessage += `*Guests:* ${guests}%0A`;
+            if (occasion) reservationMessage += `*Occasion:* ${occasion}%0A`;
+            if (message) reservationMessage += `*Special Requests:* ${message}%0A`;
+            reservationMessage += `%0A_Please confirm this reservation at your earliest convenience._`;
+            
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${reservationMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'var(--shadow)';
+            }
+        });
+        
+        // Set minimum date for reservation to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').min = today;
+        
+        // Initialize time to current time + 2 hours
+        const now = new Date();
+        now.setHours(now.getHours() + 2);
+        const timeString = now.getHours().toString().padStart(2, '0') + ':00';
+        document.getElementById('time').value = timeString;
+    </script>
+</body>
+</html>
