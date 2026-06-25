@@ -1,0 +1,2468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lalit Food & Catering | Catering Services in Dehri On Sone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #c9a84c;
+            --primary-light: #f0d060;
+            --secondary-color: #7b0000;
+            --accent-color: #faf7f0;
+            --dark-color: #1a1a1a;
+            --dark2-color: #2d2d2d;
+            --light-color: #ffffff;
+            --green-color: #2e8b57;
+            --blue-color: #1e90ff;
+            --text-muted: #777;
+            --shadow: 0 8px 25px rgba(0,0,0,0.08);
+            --shadow-heavy: 0 20px 50px rgba(0,0,0,0.15);
+            --shadow-gold: 0 8px 30px rgba(201,168,76,0.35);
+            --border-radius: 16px;
+            --border-radius-sm: 10px;
+            --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--accent-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(201,168,76,0.15);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--secondary-color);
+            gap: 14px;
+        }
+
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: #fff;
+            box-shadow: var(--shadow-gold);
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+
+        .logo-tagline {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding: 8px 14px;
+            border-radius: 8px;
+            position: relative;
+            letter-spacing: 0.2px;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+            background: rgba(201,168,76,0.08);
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+            left: 50%;
+            bottom: 4px;
+            transform: translateX(-50%);
+            transition: width 0.3s;
+            border-radius: 2px;
+        }
+
+        nav ul li a:hover:after {
+            width: 60%;
+        }
+
+        .cta-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            width: 42px;
+            height: 42px;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            cursor: pointer;
+            z-index: 1001;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(123,0,0,0.6) 100%), url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--light-color);
+            padding: 200px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: var(--accent-color);
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,168,76,0.2);
+            border: 1px solid rgba(201,168,76,0.5);
+            color: var(--primary-light);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.15;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #fff 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 680px;
+            margin: 0 auto 45px;
+            opacity: 0.88;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+            -webkit-text-fill-color: rgba(255,255,255,0.9);
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-stat h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-light);
+            -webkit-text-fill-color: var(--primary-light);
+        }
+
+        .hero-stat p {
+            font-size: 0.85rem;
+            margin: 0;
+            opacity: 0.7;
+            letter-spacing: 0.5px;
+            -webkit-text-fill-color: rgba(255,255,255,0.7);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            gap: 10px;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.15);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .btn:hover::after {
+            opacity: 1;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: #1a1a1a;
+            box-shadow: 0 6px 25px rgba(201,168,76,0.4);
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(201,168,76,0.55);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--light-color);
+            border: 2px solid rgba(255,255,255,0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            box-shadow: 0 6px 25px rgba(37,211,102,0.35);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37,211,102,0.5);
+        }
+        
+        /* Sections */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+            border: 1px solid rgba(201,168,76,0.3);
+            color: var(--primary-color);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--dark-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 18px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .section-title h2 span {
+            color: var(--primary-color);
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: 15px auto 0;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            line-height: 1.35;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fffbf0, #fff8e1);
+            border-left: 4px solid var(--primary-color);
+            padding: 22px 25px;
+            border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+            margin: 25px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-box h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .highlight-box p {
+            font-size: 0.97rem;
+            margin: 0;
+            color: #555;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--light-color);
+            padding: 16px 18px;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .feature:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-heavy);
+            border-color: rgba(201,168,76,0.2);
+        }
+
+        .feature i {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .feature h4 {
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+            color: var(--dark-color);
+            font-weight: 700;
+        }
+
+        .feature p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+            position: relative;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.5) 100%);
+            z-index: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.04);
+        }
+
+        .image-badge {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: #1a1a1a;
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 5px 20px rgba(201,168,76,0.4);
+            z-index: 2;
+        }
+        
+        /* Menu Section - COMPREHENSIVE */
+        .menu-section {
+            background-color: var(--light-color);
+        }
+        
+        .menu-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .menu-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .category-btn {
+            padding: 14px 28px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .menu-search {
+            position: relative;
+            width: 300px;
+        }
+        
+        .menu-search input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border-radius: 50px;
+            border: 2px solid #ddd;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .menu-search input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        
+        .menu-search i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+        
+        .menu-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0 40px;
+            justify-content: center;
+        }
+        
+        .menu-tag {
+            padding: 8px 18px;
+            background-color: #f0f0f0;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .menu-tag.veg { background-color: #e8f7e8; color: var(--green-color); border-left: 4px solid var(--green-color); }
+        .menu-tag.nonveg { background-color: #ffe8e8; color: var(--secondary-color); border-left: 4px solid var(--secondary-color); }
+        .menu-tag.halal { background-color: #e8f0ff; color: var(--blue-color); border-left: 4px solid var(--blue-color); }
+        .menu-tag.spicy { background-color: #fff0e8; color: #ff6600; border-left: 4px solid #ff6600; }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+        }
+        
+        .menu-category-section {
+            margin-bottom: 80px;
+        }
+        
+        .menu-category-section h3 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+        }
+        
+        .menu-item {
+            background-color: var(--accent-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .menu-item-header {
+            position: relative;
+        }
+        
+        .menu-item-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .menu-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        
+        .menu-item:hover .menu-item-image img {
+            transform: scale(1.1);
+        }
+        
+        .menu-item-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-color);
+            color: var(--dark-color);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .menu-item-badge.new { background: #ff4757; color: white; }
+        .menu-item-badge.popular { background: var(--secondary-color); color: white; }
+        .menu-item-badge.chef { background: var(--green-color); color: white; }
+        
+        .menu-item-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .menu-item-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .menu-item-title h4 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            line-height: 1.3;
+            flex: 1;
+        }
+        
+        .menu-item-price {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-left: 15px;
+        }
+        
+        .menu-item-desc {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .menu-item-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .menu-item-tags {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .menu-item-tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+        
+        .menu-item-tag.veg { background-color: #e8f7e8; color: var(--green-color); }
+        .menu-item-tag.nonveg { background-color: #ffe8e8; color: var(--secondary-color); }
+        .menu-item-tag.spicy { background-color: #fff0e8; color: #ff6600; }
+        
+        .menu-item-order {
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .menu-item-order:hover {
+            background-color: #a00000;
+            transform: scale(1.05);
+        }
+        
+        .menu-show-more {
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        /* Services Section */
+        .services-section {
+            background: var(--accent-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 35px 28px;
+            text-align: left;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+            border-color: rgba(201,168,76,0.15);
+        }
+
+        .service-icon {
+            width: 62px;
+            height: 62px;
+            background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+            border: 2px solid rgba(201,168,76,0.2);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 22px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: #fff;
+            border-color: transparent;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--dark-color);
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .service-features li {
+            padding: 7px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+
+        .service-features li:before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--light-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .contact-details {
+            margin-bottom: 35px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 16px;
+            background: var(--accent-color);
+            padding: 18px 20px;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+
+        .contact-detail:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow);
+            border-color: rgba(201,168,76,0.2);
+        }
+
+        .contact-detail i {
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: #fff;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .contact-detail h4 {
+            font-size: 0.8rem;
+            margin-bottom: 3px;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .contact-detail p {
+            font-size: 1rem;
+            color: var(--dark-color);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .contact-map {
+            margin-top: 25px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 220px;
+            background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            border: 2px dashed rgba(201,168,76,0.3);
+        }
+
+        .contact-map i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            background: var(--accent-color);
+            border-radius: 12px;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: #fff;
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-gold);
+            border-color: transparent;
+        }
+
+        .contact-form-container {
+            background: var(--accent-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-heavy);
+            border: 1px solid rgba(201,168,76,0.1);
+        }
+
+        .contact-form-container h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            letter-spacing: 0.3px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 13px 18px;
+            border: 2px solid #e8e8e8;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.97rem;
+            transition: var(--transition);
+            background: var(--light-color);
+            color: var(--dark-color);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(201,168,76,0.12);
+        }
+
+        textarea.form-control {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        /* Hours Section */
+        .hours-section {
+            background: linear-gradient(135deg, #1a0000 0%, #3d0000 50%, #1a0000 100%);
+            color: var(--light-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hours-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hours-section .section-title h2 {
+            color: var(--light-color);
+        }
+
+        .hours-section .section-title h2:after {
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+        }
+
+        .hours-section .section-title p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hours-card {
+            background: rgba(255,255,255,0.05);
+            padding: 35px 30px;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(201,168,76,0.2);
+            transition: var(--transition);
+        }
+
+        .hours-card:hover {
+            background: rgba(255,255,255,0.09);
+            transform: translateY(-6px);
+            border-color: rgba(201,168,76,0.45);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .hours-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 22px;
+            color: var(--primary-light);
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(201,168,76,0.2);
+        }
+
+        .hours-card p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255,255,255,0.8);
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hours-card p:last-child {
+            border-bottom: none;
+        }
+
+        .hours-card p strong {
+            color: rgba(255,255,255,0.55);
+            font-weight: 500;
+        }
+
+        .hours-note {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+        
+        /* Resort Facilities */
+        .facilities-section {
+            background-color: var(--accent-color);
+        }
+        
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .facility-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .facility-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .facility-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        
+        .facility-card:hover .facility-image img {
+            transform: scale(1.1);
+        }
+        
+        .facility-content {
+            padding: 25px;
+        }
+        
+        .facility-content h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+            color: var(--light-color);
+            padding: 80px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), var(--primary-light), var(--primary-color), transparent);
+        }
+
+        footer::after {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: var(--primary-light);
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .footer-desc {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.92rem;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.92rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+            padding-left: 5px;
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            width: 16px;
+        }
+
+        .footer-links li:not(:has(a)) {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.92rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-links li:not(:has(a)) i {
+            color: var(--primary-color);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .google-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(201,168,76,0.2);
+            padding: 12px 18px;
+            border-radius: var(--border-radius-sm);
+            margin-top: 5px;
+        }
+
+        .stars {
+            color: var(--primary-color);
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .copyright {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .copyright a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 14px;
+            font-size: 1.7rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .payment-methods i:hover {
+            color: var(--primary-light);
+            transition: var(--transition);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 58px;
+            height: 58px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: #fff;
+            box-shadow: 0 6px 25px rgba(37,211,102,0.5);
+            z-index: 999;
+            text-decoration: none;
+            transition: var(--transition);
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.12);
+            box-shadow: 0 10px 35px rgba(37,211,102,0.65);
+        }
+
+        @keyframes pulse-whatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+            70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.6rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero {
+                padding: 160px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .menu-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .menu-search {
+                width: 100%;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--light-color);
+                box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+                transition: left 0.5s;
+                z-index: 999;
+                padding: 100px 30px 30px;
+                overflow-y: auto;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0;
+                margin-bottom: 25px;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                font-size: 1.3rem;
+            }
+            
+            .cta-header {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-container {
+                padding: 30px 25px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .category-btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            .menu-categories {
+                justify-content: center;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div>
+                    <div class="logo-text">Lalit Food & Catering</div>
+                    <div class="logo-tagline">Owned By Lalit Jee</div>
+                </div>
+            </a>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="cta-header">
+                <a href="tel:+917061300210" class="btn btn-primary">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-badge"><i class="fas fa-star"></i> Premium Catering Services — Dehri On Sone</div>
+            <h1>Lalit Food & Catering</h1>
+            <p>Delicious, high-quality cuisine for all events — Weddings, Corporates & More | Dehri On Sone</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary">
+                    <i class="fas fa-utensils"></i> View Full Menu
+                </a>
+                <a href="https://wa.me/917061300210?text=Hello%20Lalit%20Food%20%26%20Catering%2C%20I%20would%20like%20to%20make%20a%20reservation" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Reservation
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-map-marker-alt"></i> Visit Us
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><h3>500+</h3><p>Events Catered</p></div>
+                <div class="hero-stat"><h3>11</h3><p>Services Offered</p></div>
+                <div class="hero-stat"><h3>7</h3><p>Days Open</p></div>
+                <div class="hero-stat"><h3>100%</h3><p>Fresh Ingredients</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Lalit Food & Catering</h2>
+                <p>Offering delicious, high-quality cuisine for all events, from weddings to corporate gatherings, in Dehri On Sone.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Every Occasion Deserves the Best Food</h3>
+                    <p>Located at Pali Road, Besides Hotel Vandana, Dehri On Sone, Lalit Food & Catering offers delicious, high-quality cuisine for all events. With a passion for flavor and exceptional service, we provide customized menus, fresh ingredients, and a delightful dining experience to make every occasion special.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Why Choose Lalit Food & Catering?</h4>
+                        <p>Owned by Lalit Jee, we specialize in customized menus tailored to your preferences — from intimate home gatherings to grand wedding receptions, we bring the finest flavors to every table.</p>
+                    </div>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Premium Quality</h4>
+                                <p>Finest ingredients, expert chefs</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Family Friendly</h4>
+                                <p>Special kids menu & play area</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-parking"></i>
+                            <div>
+                                <h4>Free Parking</h4>
+                                <p>Secure, spacious parking lot</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-wifi"></i>
+                            <div>
+                                <h4>Free WiFi</h4>
+                                <p>High-speed internet throughout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Zest Dining Restaurant Interior">
+                    <div class="image-badge">4.8 ★ Rated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - COMPREHENSIVE -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Menu</h2>
+                <p>Discover our multi-cuisine offerings featuring Indian, Chinese, Continental, and local Bihari specialties.</p>
+            </div>
+            
+            <div class="menu-controls">
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fas fa-th-large"></i> All Items
+                    </button>
+                    <button class="category-btn" data-category="starters">
+                        <i class="fas fa-utensil-spoon"></i> Starters
+                    </button>
+                    <button class="category-btn" data-category="maincourse">
+                        <i class="fas fa-drumstick-bite"></i> Main Course
+                    </button>
+                    <button class="category-btn" data-category="biryani">
+                        <i class="fas fa-mortar-pestle"></i> Biryani & Rice
+                    </button>
+                    <button class="category-btn" data-category="chinese">
+                        <i class="fas fa-utensils"></i> Chinese
+                    </button>
+                </div>
+                
+                <div class="menu-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="menuSearch" placeholder="Search for dishes...">
+                </div>
+            </div>
+            
+            <div class="menu-tags">
+                <span class="menu-tag veg">Vegetarian</span>
+                <span class="menu-tag nonveg">Non-Vegetarian</span>
+                <span class="menu-tag halal">Halal Certified</span>
+                <span class="menu-tag spicy">Spicy Options</span>
+                <span class="menu-tag">Gluten-Free Available</span>
+                <span class="menu-tag">Chef's Special</span>
+            </div>
+            
+            <!-- Starters Category -->
+            <div class="menu-category-section" id="starters-section">
+                <h3>Starters & Appetizers</h3>
+                <div class="menu-grid">
+                    <!-- Starters will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Main Course Category -->
+            <div class="menu-category-section" id="maincourse-section">
+                <h3>Main Course</h3>
+                <div class="menu-grid">
+                    <!-- Main Course will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Biryani Category -->
+            <div class="menu-category-section" id="biryani-section">
+                <h3>Biryani & Rice Specialties</h3>
+                <div class="menu-grid">
+                    <!-- Biryani will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Chinese Category -->
+            <div class="menu-category-section" id="chinese-section">
+                <h3>Chinese Cuisine</h3>
+                <div class="menu-grid">
+                    <!-- Chinese will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Breads & Desserts -->
+            <div class="menu-category-section" id="extras-section">
+                <h3>Breads, Desserts & Beverages</h3>
+                <div class="menu-grid">
+                    <!-- Extras will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="menu-show-more">
+                <button class="btn btn-primary" id="loadMoreMenu">
+                    <i class="fas fa-arrow-down"></i> View Complete Menu
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - EXPANDED -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive services for dining, parties, and events</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-ring"></i></div>
+                    <h3>Wedding Catering</h3>
+                    <p>Elegant and delicious menus tailored for your special day.</p>
+                    <ul class="service-features">
+                        <li>Customized Wedding Menus</li>
+                        <li>Live Counters</li>
+                        <li>Experienced Staff</li>
+                        <li>All Cuisines Available</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Corporate Catering</h3>
+                    <p>Professional meal services for meetings, conferences, and corporate events.</p>
+                    <ul class="service-features">
+                        <li>Breakfast & Lunch</li>
+                        <li>Conference Packages</li>
+                        <li>Bulk Orders</li>
+                        <li>Timely Delivery</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-birthday-cake"></i></div>
+                    <h3>Birthday & Anniversary Catering</h3>
+                    <p>Customized food options to celebrate milestones.</p>
+                    <ul class="service-features">
+                        <li>Personalized Menus</li>
+                        <li>Cake & Desserts</li>
+                        <li>Snacks & Starters</li>
+                        <li>Full Meal Service</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Buffet & Live Counters</h3>
+                    <p>Interactive food stations with fresh, live cooking.</p>
+                    <ul class="service-features">
+                        <li>Live Tawa & Tandoor</li>
+                        <li>Chaat Counters</li>
+                        <li>Salad & Dessert Bar</li>
+                        <li>50+ Dishes</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <h3>Customized Menu Planning</h3>
+                    <p>Personalized food options based on dietary preferences and tastes.</p>
+                    <ul class="service-features">
+                        <li>Veg & Non-Veg Options</li>
+                        <li>Regional Cuisines</li>
+                        <li>Diet-Friendly Menus</li>
+                        <li>Taste Trials Available</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-coffee"></i></div>
+                    <h3>High-Tea & Snacks Catering</h3>
+                    <p>Elegant tea-time spreads with a variety of snacks, desserts, and beverages.</p>
+                    <ul class="service-features">
+                        <li>Sandwiches & Pastries</li>
+                        <li>Hot & Cold Beverages</li>
+                        <li>Finger Foods</li>
+                        <li>Seasonal Specials</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-glass-martini-alt"></i></div>
+                    <h3>Cocktail Party Catering</h3>
+                    <p>Exclusive finger foods, canapés, and drinks for a stylish gathering.</p>
+                    <ul class="service-features">
+                        <li>Canapés & Starters</li>
+                        <li>Mocktail Bar</li>
+                        <li>Themed Setups</li>
+                        <li>Evening Snacks</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-pray"></i></div>
+                    <h3>Festival & Religious Event Catering</h3>
+                    <p>Pure vegetarian and customized menus for cultural and spiritual occasions.</p>
+                    <ul class="service-features">
+                        <li>Satvik / Pure Veg Options</li>
+                        <li>Puja Prasad Packages</li>
+                        <li>Festival Specials</li>
+                        <li>Community Feast</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3>Home Catering Services</h3>
+                    <p>Hassle-free catering for intimate house parties and family gatherings.</p>
+                    <ul class="service-features">
+                        <li>Small to Large Groups</li>
+                        <li>Setup & Cleanup</li>
+                        <li>Flexible Menus</li>
+                        <li>Affordable Pricing</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Premium Catering for VIP Events</h3>
+                    <p>Luxury dining experiences with gourmet menus and top-notch service.</p>
+                    <ul class="service-features">
+                        <li>Gourmet Cuisine</li>
+                        <li>White-Glove Service</li>
+                        <li>Premium Decor</li>
+                        <li>Exclusive Packages</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Health & Diet-Specific Catering</h3>
+                    <p>Special menus including vegan, keto, gluten-free, and diabetic-friendly options.</p>
+                    <ul class="service-features">
+                        <li>Vegan & Keto Menus</li>
+                        <li>Gluten-Free Options</li>
+                        <li>Diabetic-Friendly</li>
+                        <li>Calorie-Counted Meals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resort Facilities -->
+    <section class="section facilities-section" id="facilities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Facilities & Ambiance</h2>
+                <p>Special features that make Zest Dining unique</p>
+            </div>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Fireplace">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Fireplace</h3>
+                        <p>Cozy fireplace setting for a warm and romantic dining experience.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Vegan Options">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Vegan Options</h3>
+                        <p>Wide variety of vegan-friendly dishes crafted with fresh, plant-based ingredients.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Party Hall">
+                    </div>
+                    <div class="facility-content">
+                        <h3>Party Hall</h3>
+                        <p>Spacious party hall on 1st & 2nd floor of Nexus Infinity for all your celebrations.</p>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="All You Can Eat">
+                    </div>
+                    <div class="facility-content">
+                        <h3>All You Can Eat</h3>
+                        <p>Unlimited buffet with a wide spread of dishes at just ₹200–400 per person.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="section hours-section" id="hours">
+        <div class="container">
+            <div class="section-title">
+                <h2>Opening Hours</h2>
+                <p>Visit us during our operating hours for dining or resort stay</p>
+            </div>
+            
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <h3>Business Hours</h3>
+                    <p><strong>Monday:</strong> 09:00 AM – 11:00 PM</p>
+                    <p><strong>Tuesday:</strong> 09:00 AM – 11:00 PM</p>
+                    <p><strong>Wednesday:</strong> 09:00 AM – 11:00 PM</p>
+                    <p><strong>Thursday:</strong> 09:00 AM – 11:00 PM</p>
+                    <p><strong>Friday:</strong> 09:00 AM – 11:00 PM</p>
+                    <p><strong>Saturday:</strong> 09:00 AM – 11:00 PM</p>
+                    <p><strong>Sunday:</strong> 09:00 AM – 11:00 PM</p>
+                </div>
+                <div class="hours-card">
+                    <h3>Contact Us</h3>
+                    <p><strong>Phone:</strong> +91 7061300210</p>
+                    <p><strong>WhatsApp:</strong> +91 7061300210</p>
+                    <p><strong>Instagram:</strong> @lalit_foodcourt</p>
+                    <p><strong>For Bookings:</strong> Call or WhatsApp</p>
+                </div>
+                <div class="hours-card">
+                    <h3>Our Location</h3>
+                    <p><strong>Address:</strong> Pali Road, Besides Hotel Vandana, Dehri On Sone</p>
+                    <p><strong>Event Inquiries:</strong> Available 7 Days</p>
+                    <p><strong>Home Delivery:</strong> Available on Request</p>
+                </div>
+            </div>
+            
+            <div class="hours-note">
+                <p>* Hours may vary on public holidays. Please call ahead to confirm.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch for reservations, events, or inquiries</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Visit Lalit Food & Catering</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Pali Road, Besides Hotel Vandana, Dehri On Sone</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone / WhatsApp</h4>
+                                <p>+91 7061300210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p><a href="https://www.instagram.com/lalit_foodcourt/" target="_blank" style="color:inherit;">@lalit_foodcourt</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <p>Interactive Map Location</p>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px;">Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lalit_foodcourt/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="https://wa.me/917061300210" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3>Quick Reservation</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mobile">Mobile Number *</label>
+                                <input type="text" id="mobile" class="form-control" placeholder="10-digit mobile number" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your Email (optional)">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <input type="time" id="time" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests">Number of Guests *</label>
+                                <select id="guests" class="form-control" required>
+                                    <option value="">Select</option>
+                                    <option value="1-2">1-2 Guests</option>
+                                    <option value="3-4">3-4 Guests</option>
+                                    <option value="5-6">5-6 Guests</option>
+                                    <option value="7-10">7-10 Guests</option>
+                                    <option value="10+">10+ Guests</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="occasion">Occasion (Optional)</label>
+                                <select id="occasion" class="form-control">
+                                    <option value="">Select Occasion</option>
+                                    <option value="birthday">Birthday</option>
+                                    <option value="anniversary">Anniversary</option>
+                                    <option value="business">Business Meeting</option>
+                                    <option value="family">Family Gathering</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Special Requests</label>
+                            <textarea id="message" class="form-control" placeholder="Any dietary restrictions, special arrangements, or requests..."></textarea>
+                        </div>
+                        
+                        <button type="button" class="btn btn-whatsapp" onclick="sendReservationToWhatsApp()" style="width: 100%; margin-top: 10px;">
+                            <i class="fab fa-whatsapp"></i> Send Reservation via WhatsApp
+                        </button>
+                        
+                        <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">
+                            Or call us directly at <strong>+91 7061300210</strong>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Lalit Food & Catering</h3>
+                    <p>Owned by Lalit Jee. Offering delicious, high-quality cuisine for all events — from weddings to corporate gatherings — in Dehri On Sone.</p>
+                    <div class="google-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>4.8/5 (547 Google Reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+                        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                        <li><a href="#facilities"><i class="fas fa-swimming-pool"></i> Facilities</a></li>
+                        <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                        <li><a href="tel:07360099512"><i class="fas fa-phone-alt"></i> Call Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="fas fa-buffet"></i> All-You-Can-Eat Buffet</a></li>
+                        <li><a href="#services"><i class="fas fa-glass-cheers"></i> Happy Hour & Bar</a></li>
+                        <li><a href="#services"><i class="fas fa-door-closed"></i> Private Dining</a></li>
+                        <li><a href="#services"><i class="fas fa-truck"></i> Delivery & Takeaway</a></li>
+                        <li><a href="#services"><i class="fas fa-calendar-alt"></i> Events & Catering</a></li>
+                        <li><a href="#services"><i class="fas fa-concierge-bell"></i> Banquet & Conference</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Pali Road, Besides Hotel Vandana, Dehri On Sone</li>
+                        <li><i class="fas fa-phone"></i> +91 7061300210</li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/lalit_foodcourt/" target="_blank" style="color:#bbb;">@lalit_foodcourt</a></li>
+                        <li><i class="fas fa-clock"></i> Open Daily · 09:00 AM – 11:00 PM</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp: +91 7061300210</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Lalit Food & Catering. All Rights Reserved.</p>
+                    <p style="margin-top: 10px; font-size: 0.85rem;">Made by Nextapsolutions.com</p>
+                </div>
+                
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard" title="MasterCard"></i>
+                    <i class="fab fa-cc-amex" title="American Express"></i>
+                    <i class="fas fa-rupee-sign" title="Cash"></i>
+                    <i class="fab fa-google-pay" title="Google Pay"></i>
+                    <i class="fab fa-phonepe" title="PhonePe"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917061300210" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // COMPREHENSIVE MENU DATA
+        const menuItems = [
+            // STARTERS (25 items)
+            { id: 1, name: "Paneer Tikka", category: "starters", price: "₹280", description: "Cottage cheese cubes marinated in spices and grilled in tandoor", tags: ["veg"], badge: "popular", image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 2, name: "Chicken Tikka", category: "starters", price: "₹320", description: "Boneless chicken marinated in yogurt and spices, tandoor grilled", tags: ["nonveg", "spicy"], badge: "popular", image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 3, name: "Vegetable Spring Rolls", category: "starters", price: "₹220", description: "Crispy rolls filled with mixed vegetables, served with schezwan sauce", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 4, name: "Fish Amritsari", category: "starters", price: "₹350", description: "Boneless fish pieces coated in gram flour and spices, deep fried", tags: ["nonveg"], badge: "chef", image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 5, name: "Hara Bhara Kabab", category: "starters", price: "₹240", description: "Green spinach and potato kababs with mint chutney", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1642501374623-03b64c6c7da4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 6, name: "Chilli Chicken", category: "starters", price: "₹290", description: "Crispy chicken tossed in spicy chilli sauce with bell peppers", tags: ["nonveg", "spicy"], badge: "popular", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1381&q=80" },
+            { id: 7, name: "Cheese Garlic Bread", category: "starters", price: "₹180", description: "Toasted bread with garlic butter and melted cheese", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 8, name: "Mutton Seekh Kabab", category: "starters", price: "₹340", description: "Minced mutton kababs flavored with spices, grilled in tandoor", tags: ["nonveg"], badge: "chef", image: "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            
+            // MAIN COURSE (30 items)
+            { id: 9, name: "Paneer Butter Masala", category: "maincourse", price: "₹280", description: "Cottage cheese cubes in rich, creamy tomato gravy with butter", tags: ["veg"], badge: "popular", image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 10, name: "Butter Chicken", category: "maincourse", price: "₹320", description: "Tender chicken in creamy tomato and butter sauce", tags: ["nonveg"], badge: "popular", image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 11, name: "Dal Makhani", category: "maincourse", price: "₹220", description: "Black lentils slow cooked with butter and cream", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1585937421612-70ca003675ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 12, name: "Kadhai Chicken", category: "maincourse", price: "₹310", description: "Chicken cooked in kadhai with bell peppers and spices", tags: ["nonveg", "spicy"], badge: "", image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 13, name: "Palak Paneer", category: "maincourse", price: "₹260", description: "Cottage cheese cubes in creamy spinach gravy", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1381&q=80" },
+            { id: 14, name: "Rogan Josh", category: "maincourse", price: "₹350", description: "Mutton curry in aromatic Kashmiri red gravy", tags: ["nonveg"], badge: "chef", image: "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 15, name: "Mix Veg Curry", category: "maincourse", price: "₹230", description: "Assorted vegetables cooked in mild gravy", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=1365&q=80" },
+            { id: 16, name: "Chicken Chettinad", category: "maincourse", price: "₹330", description: "Spicy South Indian chicken curry with coconut", tags: ["nonveg", "spicy"], badge: "popular", image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            
+            // BIRYANI & RICE (20 items)
+            { id: 17, name: "Veg Biryani", category: "biryani", price: "₹220", description: "Fragrant basmati rice cooked with mixed vegetables and spices", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1633945274417-ab16e2fd4ac8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80" },
+            { id: 18, name: "Chicken Biryani", category: "biryani", price: "₹280", description: "Aromatic rice with tender chicken pieces and spices", tags: ["nonveg"], badge: "popular", image: "https://images.unsplash.com/photo-1563379091339-03246963d9d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 19, name: "Mutton Biryani", category: "biryani", price: "₹350", description: "Flavorful biryani with succulent mutton pieces", tags: ["nonveg"], badge: "chef", image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80" },
+            { id: 20, name: "Paneer Biryani", category: "biryani", price: "₹250", description: "Biryani with cottage cheese cubes and aromatic spices", tags: ["veg"], badge: "new", image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 21, name: "Egg Biryani", category: "biryani", price: "₹240", description: "Biryani with boiled eggs and special spices", tags: ["nonveg"], badge: "", image: "https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 22, name: "Hyderabadi Dum Biryani", category: "biryani", price: "₹320", description: "Authentic Hyderabadi style dum cooked biryani", tags: ["nonveg"], badge: "popular", image: "https://images.unsplash.com/photo-1563379091339-03246963d9d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 23, name: "Jeera Rice", category: "biryani", price: "₹180", description: "Basmati rice tempered with cumin seeds", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 24, name: "Kashmiri Pulao", category: "biryani", price: "₹240", description: "Sweet and fragrant rice with dry fruits", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1598866592122-08b3c2c76d2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            
+            // CHINESE (25 items)
+            { id: 25, name: "Hakka Noodles", category: "chinese", price: "₹180", description: "Stir-fried noodles with vegetables in soy sauce", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1392&q=80" },
+            { id: 26, name: "Chicken Manchurian", category: "chinese", price: "₹290", description: "Fried chicken balls in spicy Manchurian sauce", tags: ["nonveg", "spicy"], badge: "popular", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1381&q=80" },
+            { id: 27, name: "Veg Manchurian", category: "chinese", price: "₹220", description: "Vegetable balls in spicy Manchurian sauce", tags: ["veg", "spicy"], badge: "", image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 28, name: "Chilli Paneer", category: "chinese", price: "₹260", description: "Paneer cubes stir-fried with bell peppers and spicy sauce", tags: ["veg", "spicy"], badge: "", image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=1365&q=80" },
+            { id: 29, name: "Singapore Noodles", category: "chinese", price: "₹210", description: "Spicy curry flavored noodles with vegetables", tags: ["veg", "spicy"], badge: "new", image: "https://images.unsplash.com/photo-1552611052-33b04c8c17c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 30, name: "Chicken Fried Rice", category: "chinese", price: "₹230", description: "Fried rice with chicken pieces and vegetables", tags: ["nonveg"], badge: "", image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 31, name: "Veg Fried Rice", category: "chinese", price: "₹190", description: "Fried rice with assorted vegetables", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1480&q=80" },
+            { id: 32, name: "Sweet Corn Soup", category: "chinese", price: "₹160", description: "Hot soup with sweet corn and vegetables", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            
+            // EXTRAS: BREADS, DESSERTS, BEVERAGES (30 items)
+            { id: 33, name: "Butter Naan", category: "extras", price: "₹60", description: "Soft leavened bread brushed with butter", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 34, name: "Garlic Naan", category: "extras", price: "₹80", description: "Naan stuffed with garlic and herbs", tags: ["veg"], badge: "popular", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 35, name: "Roti/Chapati", category: "extras", price: "₹20", description: "Whole wheat flatbread", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1381&q=80" },
+            { id: 36, name: "Gulab Jamun", category: "extras", price: "₹120", description: "Soft milk dumplings in sugar syrup", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 37, name: "Rasmalai", category: "extras", price: "₹140", description: "Soft cottage cheese patties in sweetened milk", tags: ["veg"], badge: "popular", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1450&q=80" },
+            { id: 38, name: "Ice Cream", category: "extras", price: "₹100", description: "Vanilla, Chocolate, Strawberry, Butterscotch", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" },
+            { id: 39, name: "Fresh Lime Soda", category: "extras", price: "₹80", description: "Fresh lime with soda, sweet or salted", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" },
+            { id: 40, name: "Masala Chai", category: "extras", price: "₹40", description: "Traditional Indian spiced tea", tags: ["veg"], badge: "", image: "https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80" }
+        ];
+        
+        // Display Menu Items by Category
+        function displayMenuByCategory() {
+            const categories = ['starters', 'maincourse', 'biryani', 'chinese', 'extras'];
+            
+            categories.forEach(category => {
+                const container = document.getElementById(`${category}-section`).querySelector('.menu-grid');
+                container.innerHTML = '';
+                
+                const categoryItems = menuItems.filter(item => item.category === category);
+                
+                categoryItems.forEach(item => {
+                    const menuItemElement = createMenuItemElement(item);
+                    container.appendChild(menuItemElement);
+                });
+            });
+        }
+        
+        // Create Menu Item Element
+        function createMenuItemElement(item) {
+            const menuItemElement = document.createElement('div');
+            menuItemElement.className = 'menu-item';
+            menuItemElement.setAttribute('data-category', item.category);
+            menuItemElement.setAttribute('data-name', item.name.toLowerCase());
+            
+            // Tags HTML
+            let tagsHTML = '';
+            if (item.tags.includes('veg')) tagsHTML += '<span class="menu-item-tag veg">Veg</span>';
+            if (item.tags.includes('nonveg')) tagsHTML += '<span class="menu-item-tag nonveg">Non-Veg</span>';
+            if (item.tags.includes('spicy')) tagsHTML += '<span class="menu-item-tag spicy">Spicy</span>';
+            
+            // Badge HTML
+            let badgeHTML = '';
+            if (item.badge === 'popular') badgeHTML = '<div class="menu-item-badge popular">Popular</div>';
+            if (item.badge === 'new') badgeHTML = '<div class="menu-item-badge new">New</div>';
+            if (item.badge === 'chef') badgeHTML = '<div class="menu-item-badge chef">Chef Special</div>';
+            
+            menuItemElement.innerHTML = `
+                <div class="menu-item-header">
+                    <div class="menu-item-image">
+                        <img src="${item.image}" alt="${item.name}" loading="lazy">
+                    </div>
+                    ${badgeHTML}
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-title">
+                        <h4>${item.name}</h4>
+                        <div class="menu-item-price">${item.price}</div>
+                    </div>
+                    <p class="menu-item-desc">${item.description}</p>
+                    <div class="menu-item-footer">
+                        <div class="menu-item-tags">
+                            ${tagsHTML}
+                        </div>
+                        <button class="menu-item-order" onclick="orderItem('${item.name}', ${item.price.replace('₹', '')})">
+                            <i class="fas fa-shopping-cart"></i> Order
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            return menuItemElement;
+        }
+        
+        // Initialize menu display
+        displayMenuByCategory();
+        
+        // Category filter buttons
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Get category
+                const category = button.getAttribute('data-category');
+                
+                // Scroll to appropriate section
+                if (category === 'all') {
+                    window.scrollTo({
+                        top: document.getElementById('menu').offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    document.getElementById(`${category}-section`).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Menu Search Functionality
+        const menuSearchInput = document.getElementById('menuSearch');
+        menuSearchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            // Show/hide menu items based on search
+            document.querySelectorAll('.menu-item').forEach(item => {
+                const itemName = item.getAttribute('data-name');
+                const itemCategory = item.getAttribute('data-category');
+                
+                if (itemName.includes(searchTerm) || itemCategory.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        // Load More Menu Items
+        document.getElementById('loadMoreMenu').addEventListener('click', function() {
+            // In a real implementation, this would load more items from a server
+            // For now, we'll simulate by showing an alert
+            alert('Full menu with 130+ items available in our restaurant! Visit us to explore all options.');
+            this.innerHTML = '<i class="fas fa-check"></i> Full Menu Available at Restaurant';
+            this.disabled = true;
+        });
+        
+        // Order Item Function
+        function orderItem(itemName, price) {
+            const whatsappNumber = "917061300210";
+            const message = `I would like to order: ${itemName} (Price: ₹${price}). Please confirm availability and delivery time.`;
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // WhatsApp Reservation Function
+        function sendReservationToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const guests = document.getElementById('guests').value;
+            const occasion = document.getElementById('occasion').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !mobile || !date || !time || !guests) {
+                alert('Please fill in all required fields (marked with *)');
+                return;
+            }
+            
+            const whatsappNumber = "917061300210";
+            
+            let reservationMessage = `*RESERVATION REQUEST FOR LALIT FOOD & CATERING*%0A%0A`;
+            reservationMessage += `*Name:* ${name}%0A`;
+            reservationMessage += `*Mobile:* ${mobile}%0A`;
+            if (email) reservationMessage += `*Email:* ${email}%0A`;
+            reservationMessage += `*Date:* ${date}%0A`;
+            reservationMessage += `*Time:* ${time}%0A`;
+            reservationMessage += `*Guests:* ${guests}%0A`;
+            if (occasion) reservationMessage += `*Occasion:* ${occasion}%0A`;
+            if (message) reservationMessage += `*Special Requests:* ${message}%0A`;
+            reservationMessage += `%0A_Please confirm this reservation at your earliest convenience._`;
+            
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${reservationMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'var(--shadow)';
+            }
+        });
+        
+        // Set minimum date for reservation to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').min = today;
+        
+        // Initialize time to current time + 2 hours
+        const now = new Date();
+        now.setHours(now.getHours() + 2);
+        const timeString = now.getHours().toString().padStart(2, '0') + ':00';
+        document.getElementById('time').value = timeString;
+    </script>
+</body>
+</html>
