@@ -1414,151 +1414,103 @@
         
         /* Responsive Design */
         @media (max-width: 1200px) {
-            .hero h1 {
-                font-size: 3.2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2.6rem;
-            }
+            .hero h1 { font-size: 3.4rem; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
         }
-        
+
         @media (max-width: 992px) {
-            .hero {
-                padding: 160px 0 80px;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .section {
-                padding: 80px 0;
-            }
-            
-            .section-title h2 {
-                font-size: 2.3rem;
-            }
-            
-            .menu-controls {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .menu-search {
-                width: 100%;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+            .hero { padding: 160px 0 100px; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-stats { gap: 30px; }
+            .section { padding: 80px 0; }
+            .section-title h2 { font-size: 2.3rem; }
+            .about-content { grid-template-columns: 1fr; gap: 40px; }
+            .about-image { order: -1; }
+            .about-image img { height: 380px; }
+            .contact-container { grid-template-columns: 1fr; }
+            .menu-controls { flex-direction: column; align-items: flex-start; }
+            .menu-search { width: 100%; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr 1fr; gap: 35px; }
         }
-        
+
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
+            .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+
             nav {
                 position: fixed;
                 top: 0;
                 left: -100%;
                 width: 280px;
                 height: 100vh;
-                background-color: var(--light-color);
-                box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
-                transition: left 0.5s;
+                background: var(--light-color);
+                box-shadow: 10px 0 40px rgba(0,0,0,0.12);
+                transition: left 0.4s cubic-bezier(0.4,0,0.2,1);
                 z-index: 999;
-                padding: 100px 30px 30px;
+                padding: 100px 25px 30px;
                 overflow-y: auto;
             }
-            
-            nav.active {
-                left: 0;
-            }
-            
+
+            nav.active { left: 0; }
+
             nav ul {
                 flex-direction: column;
+                gap: 5px;
             }
-            
-            nav ul li {
-                margin: 0;
-                margin-bottom: 25px;
-            }
-            
+
             nav ul li a {
                 display: block;
-                padding: 10px 0;
-                font-size: 1.3rem;
+                padding: 12px 16px;
+                font-size: 1.1rem;
+                border-radius: 10px;
             }
-            
-            .cta-header {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .btn {
-                padding: 14px 25px;
-                font-size: 1rem;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-            
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-form-container {
-                padding: 30px 25px;
-            }
-            
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
+
+            .cta-header { display: none; }
+
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .hero-stats { gap: 20px; flex-wrap: wrap; }
+            .hero-stat h3 { font-size: 1.6rem; }
+
+            .btn { padding: 12px 24px; font-size: 0.95rem; }
+
+            .features { grid-template-columns: 1fr; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .contact-form-container { padding: 25px 20px; }
+            .whatsapp-float { width: 52px; height: 52px; font-size: 1.4rem; bottom: 20px; right: 20px; }
         }
-        
+
         @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .category-btn {
-                padding: 12px 20px;
-                font-size: 1rem;
-            }
-            
-            .menu-categories {
-                justify-content: center;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
+            .hero h1 { font-size: 1.9rem; }
+            .hero-btns { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 280px; justify-content: center; }
+            .hero-stats { display: none; }
+            .section-title h2 { font-size: 1.9rem; }
+            .menu-categories { justify-content: center; }
+            .category-btn { padding: 10px 18px; font-size: 0.9rem; }
+            .hours-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; }
         }
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
     </style>
 </head>
 <body>
@@ -1627,8 +1579,9 @@
     <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
-            <div class="section-title">
-                <h2>About Lalit Food & Catering</h2>
+            <div class="section-title reveal">
+                <div class="section-label">Who We Are</div>
+                <h2>About Lalit Food & <span>Catering</span></h2>
                 <p>Offering delicious, high-quality cuisine for all events, from weddings to corporate gatherings, in Dehri On Sone.</p>
             </div>
             
@@ -1685,8 +1638,9 @@
     <!-- Menu Section - COMPREHENSIVE -->
     <section class="section menu-section" id="menu">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Menu</h2>
+            <div class="section-title reveal">
+                <div class="section-label">Explore Our Food</div>
+                <h2>Our <span>Menu</span></h2>
                 <p>Discover our multi-cuisine offerings featuring Indian, Chinese, Continental, and local Bihari specialties.</p>
             </div>
             
@@ -1775,8 +1729,9 @@
     <!-- Services Section - EXPANDED -->
     <section class="section" id="services">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
+            <div class="section-title reveal">
+                <div class="section-label">What We Offer</div>
+                <h2>Our <span>Services</span></h2>
                 <p>Comprehensive services for dining, parties, and events</p>
             </div>
             
@@ -1961,8 +1916,9 @@
     <!-- Hours Section -->
     <section class="section hours-section" id="hours">
         <div class="container">
-            <div class="section-title">
-                <h2>Opening Hours</h2>
+            <div class="section-title reveal">
+                <div class="section-label">We Are Open</div>
+                <h2>Business <span>Hours</span></h2>
                 <p>Visit us during our operating hours for dining or resort stay</p>
             </div>
             
@@ -1979,10 +1935,10 @@
                 </div>
                 <div class="hours-card">
                     <h3>Contact Us</h3>
-                    <p><strong>Phone:</strong> +91 7061300210</p>
-                    <p><strong>WhatsApp:</strong> +91 7061300210</p>
-                    <p><strong>Instagram:</strong> @lalit_foodcourt</p>
-                    <p><strong>For Bookings:</strong> Call or WhatsApp</p>
+                    <p><strong>Phone:</strong> <a href="tel:+917061300210" style="color:inherit; text-decoration:none;">+91 7061300210</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/917061300210" target="_blank" style="color:inherit; text-decoration:none;">+91 7061300210</a></p>
+                    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/lalit_foodcourt/" target="_blank" style="color:inherit; text-decoration:none;">@lalit_foodcourt</a></p>
+                    <p><strong>For Bookings:</strong> <a href="https://wa.me/917061300210" target="_blank" style="color:inherit; text-decoration:none;">Call or WhatsApp</a></p>
                 </div>
                 <div class="hours-card">
                     <h3>Our Location</h3>
@@ -2001,8 +1957,9 @@
     <!-- Contact Section -->
     <section class="section contact-section" id="contact">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
+            <div class="section-title reveal">
+                <div class="section-label">Get In Touch</div>
+                <h2>Contact <span>Us</span></h2>
                 <p>Get in touch for reservations, events, or inquiries</p>
             </div>
             
@@ -2023,7 +1980,7 @@
                             <i class="fas fa-phone-alt"></i>
                             <div>
                                 <h4>Phone / WhatsApp</h4>
-                                <p>+91 7061300210</p>
+                                <p><a href="tel:+917061300210" style="color:inherit; text-decoration:none;">+91 7061300210</a></p>
                             </div>
                         </div>
                         
@@ -2031,7 +1988,7 @@
                             <i class="fab fa-instagram"></i>
                             <div>
                                 <h4>Instagram</h4>
-                                <p><a href="https://www.instagram.com/lalit_foodcourt/" target="_blank" style="color:inherit;">@lalit_foodcourt</a></p>
+                                <p><a href="https://www.instagram.com/lalit_foodcourt/" target="_blank" style="color:inherit; text-decoration:none;">@lalit_foodcourt</a></p>
                             </div>
                         </div>
                     </div>
@@ -2186,7 +2143,7 @@
             <div class="footer-bottom">
                 <div class="copyright">
                     <p>&copy; 2025 Lalit Food & Catering. All Rights Reserved.</p>
-                    <p style="margin-top: 10px; font-size: 0.85rem;">Made by Nextapsolutions.com</p>
+                    <p style="margin-top: 8px; font-size: 0.85rem;">Made by <a href="https://initx.online" target="_blank" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Initx</a></p>
                 </div>
                 
                 <div class="payment-methods">
@@ -2207,6 +2164,25 @@
     </a>
 
     <script>
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+        revealElements.forEach(el => observer.observe(el));
+
+        // Add reveal to cards dynamically
+        document.querySelectorAll('.service-card, .feature, .hours-card, .menu-item, .contact-detail').forEach((el, i) => {
+            el.classList.add('reveal');
+            const delay = (i % 4);
+            if (delay > 0) el.classList.add(`reveal-delay-${delay}`);
+            observer.observe(el);
+        });
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
